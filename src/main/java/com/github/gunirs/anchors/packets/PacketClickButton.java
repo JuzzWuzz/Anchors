@@ -36,15 +36,19 @@ public class PacketClickButton implements IMessage {
 
                     if(mode == LoadingMode.SMALL) {
                         te.setField(FieldType.MODE, LoadingMode.NORMAL);
-                        te.setField(FieldType.CHUNKLOADINGTIME, time / Config.multiplier);
+                        te.setField(FieldType.CHUNKLOADINGTIME, time);
                     }
                     else if(mode == LoadingMode.NORMAL) {
                         te.setField(FieldType.MODE, LoadingMode.LARGE);
-                        te.setField(FieldType.CHUNKLOADINGTIME, time / Config.multiplier);
+                        te.setField(FieldType.CHUNKLOADINGTIME, time);
+                    }
+                    else if(mode == LoadingMode.LARGE) {
+                        te.setField(FieldType.MODE, LoadingMode.EXTRALARGE);
+                        te.setField(FieldType.CHUNKLOADINGTIME, time);
                     }
                     else {
                         te.setField(FieldType.MODE, LoadingMode.SMALL);
-                        te.setField(FieldType.CHUNKLOADINGTIME, time * (Config.multiplier * Config.multiplier));
+                        te.setField(FieldType.CHUNKLOADINGTIME, time);
                     }
                     te.getWorld().markBlockForUpdate(message.posX, message.posY, message.posZ);
                     break;

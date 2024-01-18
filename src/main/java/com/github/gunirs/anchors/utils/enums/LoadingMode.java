@@ -3,7 +3,8 @@ package com.github.gunirs.anchors.utils.enums;
 public enum LoadingMode {
     SMALL,
     NORMAL,
-    LARGE;
+    LARGE,
+    EXTRALARGE;
 
     public static LoadingMode fromInteger(int x) {
         switch(x) {
@@ -13,6 +14,8 @@ public enum LoadingMode {
                 return NORMAL;
             case 2:
                 return LARGE;
+            case 3:
+                return EXTRALARGE;
         }
         return null;
     }

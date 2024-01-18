@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
         maven {
             name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+            url = "https://maven.minecraftforge.net"
         }
         maven {
             name = "sonatype"
@@ -11,7 +11,9 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.0.+') {
+            changing = true
+        }
     }
 }
 
@@ -20,6 +22,7 @@ apply plugin: 'forge'
 version = "1.7.10-1.0"
 group= "com.github.gunirs"
 archivesBaseName = "anchors"
+//targetCompatibility = sourceCompatibility = JavaVersion.VERSION_1_8;
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
@@ -27,6 +30,9 @@ targetCompatibility = '1.8'
 idea.module.inheritOutputDirs = true
 
 minecraft {
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
     mappings = 'snapshot_20140925'
     version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "eclipse"

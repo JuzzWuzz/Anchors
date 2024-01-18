@@ -6,9 +6,9 @@ import net.minecraftforge.common.config.Configuration;
 import java.io.File;
 
 public final class Config {
-    public static String fuelItem = Registry.Items.itemTritiumCell.getUnlocalizedName();
+    public static String fuelItem = "item.enderPearl";
     public static int fuelTime = 86400; // 86400
-    public static int multiplier = 2;
+    public static int multiplier = 1;
     public static boolean enabledChunkLoader = true;
 
     public static void init() {

@@ -11,8 +11,10 @@ public class Utils {
             return I18n.format("gui.loadingModeSmall.text");
         else if(mode == 1)
             return I18n.format("gui.loadingModeNormal.text");
-        else
+        else if(mode == 2)
             return I18n.format("gui.loadingModeLarge.text");
+        else
+            return I18n.format("gui.loadingModeExtaLarge.text");
     }
 
     public static String getPaused(boolean paused) {

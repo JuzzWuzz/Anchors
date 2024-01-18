@@ -3,7 +3,6 @@ package com.github.gunirs.anchors;
 import com.github.gunirs.anchors.blocks.BlockWorldAnchor;
 import com.github.gunirs.anchors.handlers.GuiHandler;
 import com.github.gunirs.anchors.items.ItemBlockWorldAnchor;
-import com.github.gunirs.anchors.items.ItemTritiumCell;
 import com.github.gunirs.anchors.tileentity.TileWorldAnchor;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -17,14 +16,6 @@ public class Registry {
 
         public static void register() {
             GameRegistry.registerBlock(blockWorldAnchor, ItemBlockWorldAnchor.class, blockWorldAnchor.getUnlocalizedName());
-        }
-    }
-
-    public static class Items {
-        public static final Item itemTritiumCell = new ItemTritiumCell();
-
-        public static void register() {
-            GameRegistry.registerItem(itemTritiumCell, itemTritiumCell.getUnlocalizedName());
         }
     }
 
