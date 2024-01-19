@@ -17,19 +17,16 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
-import net.minecraft.nbt.NBTTagString;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import java.io.IOException;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class BlockWorldAnchor extends BlockContainer {
     public BlockWorldAnchor() {
         super(Material.rock);
-        setUnlocalizedName(Anchors.MODID + ":blockWorldAnchor");
+        setUnlocalizedName("blockWorldAnchor");
         setTextureName(Anchors.MODID + ":blockWorldAnchor");
         setHardness(2.0f);
         setCreativeTab(CreativeTabs.tabRedstone);

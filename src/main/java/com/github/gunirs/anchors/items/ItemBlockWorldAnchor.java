@@ -1,8 +1,6 @@
 package com.github.gunirs.anchors.items;
 
-import com.github.gunirs.anchors.tileentity.TileWorldAnchor;
 import com.github.gunirs.anchors.utils.Utils;
-import com.github.gunirs.anchors.utils.enums.FieldType;
 import com.github.gunirs.anchors.utils.enums.LoadingMode;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.I18n;

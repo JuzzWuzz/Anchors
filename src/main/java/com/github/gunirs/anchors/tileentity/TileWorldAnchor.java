@@ -7,7 +7,6 @@ import com.github.gunirs.anchors.utils.BlockPos;
 import com.github.gunirs.anchors.utils.enums.FieldType;
 import com.github.gunirs.anchors.utils.enums.LoadingMode;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -21,7 +20,7 @@ import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.util.Constants;
 
-public class TileWorldAnchor extends TileEntity implements IInventory, ISidedInventory {
+public class TileWorldAnchor extends TileEntity implements ISidedInventory {
     private ItemStack itemsInFirstSlot;
     private int chunkLoadingTime;
     private Ticket ticket;
@@ -143,12 +142,7 @@ public class TileWorldAnchor extends TileEntity implements IInventory, ISidedInv
             else
                 this.itemsInFirstSlot = null;
 
-            if (this.mode == LoadingMode.SMALL)
-                this.chunkLoadingTime = (20 * Config.fuelTime) * Config.multiplier;
-            else if (this.mode == LoadingMode.NORMAL)
-                this.chunkLoadingTime = 20 * Config.fuelTime;
-            else
-                this.chunkLoadingTime = (20 * Config.fuelTime) / Config.multiplier;
+            this.chunkLoadingTime = (20 * Config.fuelTime);
 
             if (!worldObj.isRemote) {
                 worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);

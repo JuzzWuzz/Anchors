@@ -7,8 +7,7 @@ import com.github.gunirs.anchors.tileentity.TileWorldAnchor;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 
 public class Registry {
     public static class Blocks {
@@ -16,6 +15,14 @@ public class Registry {
 
         public static void register() {
             GameRegistry.registerBlock(blockWorldAnchor, ItemBlockWorldAnchor.class, blockWorldAnchor.getUnlocalizedName());
+            GameRegistry.addRecipe(new ItemStack(blockWorldAnchor),
+                "DGD",
+                "GEG",
+                "DOD",
+                'D', net.minecraft.init.Blocks.diamond_block,
+                'G', net.minecraft.init.Blocks.gold_block,
+                'E', net.minecraft.init.Items.ender_eye,
+                'O', net.minecraft.init.Blocks.obsidian);
         }
     }
 

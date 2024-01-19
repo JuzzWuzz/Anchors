@@ -8,7 +8,6 @@ import java.io.File;
 public final class Config {
     public static String fuelItem = "item.enderPearl";
     public static int fuelTime = 86400; // 86400
-    public static int multiplier = 1;
     public static boolean enabledChunkLoader = true;
 
     public static void init() {
@@ -21,7 +20,6 @@ public final class Config {
             fuelItem = cfg.getString("fuelItem", c, fuelItem, "Item used as fuel for the world anchor");
 
             fuelTime = cfg.getInt("fuelTime", c + ".time", fuelTime, 1, Integer.MAX_VALUE, "Time of operation of the world anchor for 1 unit of fuel [in seconds]");
-            multiplier = cfg.getInt("multiplier", c + ".time", multiplier, 0, Integer.MAX_VALUE, "Fuel multiplier depending on the mode.\nExample: For 1 unit. fuel you get 24 hours 3x3 anchors.\nIf the player sets the 5x5 mode, then the time will be divided by a multiplier");
 
             cfg.save();
         }

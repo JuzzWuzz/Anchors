@@ -1,4 +1,4 @@
-tile.anchors:blockWorldAnchor.name=World Anchor
+tile.blockWorldAnchor.name=World Anchor
 inventory.worldAnchor.name=World Anchor
 inventory.mode.text=Mode
 

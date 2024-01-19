@@ -11,7 +11,7 @@ This chunk loader incorporates the best of **ChickenChunks** and **Railcraft**.<
 # Functions
  * Pause the chunk loader
  * Select chunk loading modes (1x1, 3x3, 5x5)
- * Set your fuel for loading chunks in the config. You can also change the multiplier when changing the mode
+ * Set your fuel for loading chunks in the config.
  * It's easy to disable all anchors if "something is wrong" and then enable it without loss
  * Display chunks that are affected by the chunk loader right in the world.
  * Save time and mode by breaking the anchor and placing it in another place.
